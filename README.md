@@ -2,6 +2,32 @@
 
 This SAT solver implements the **Davis–Putnam–Logemann–Loveland (DPLL)** backtracking algorithm to determine whether a propositional logic formula in **Conjunctive Normal Form (CNF)** is satisfiable.
 
+## Source and scripts
+
+The source of the implemented solver is located under the `src` directory, in the `sat.cpp` file.
+
+Some scripts are attached in the project, at the top-most level of the directory hierarchy:
+
+* `Makefile`: a `make` script, to compile the solver.
+* `sat.sh`: a wrapper over the main executable file, which is located under the `bin` directory, after being
+compiled. The script allows to either compile or run the solver with a given input problem file.
+* `runner.sh`: a simple script that executes the solver with each problem file under the `sample_problems`
+directory.
+
+## Compiling and executing the solver
+
+To compile the solver, execute:
+
+```bash
+./sat.sh compile
+```
+
+To run the solver with an example input problem:
+
+```bash
+./sat.sh run sample_problems/vars-100-1.cnf
+```
+
 ## **Overview of the Algorithm**
 
 The **DPLL algorithm** is a complete algorithm for solving the propositional satisfiability problem (SAT). It works by:
